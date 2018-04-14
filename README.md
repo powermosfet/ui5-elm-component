@@ -1,9 +1,14 @@
 # ui5-elm-component
 Run an elm app in UI5 as a component
 
-Usage example:
+The Elm app needs two ports to communicate with the UI5 component: one for events going out, and one for actions coming in. 
+
+The UI5 component needs to know their name, and this is configurable through the properties `eventPort` and `actionPort`. The default values for these properties are `outbound` and `inbound`, respectively.  
+
+Usage example: 
 
     var elmApp = new custom.component.Elm({ app: Elm.ElmCounter });
+    
     elmApp.attachElmEvent(function(oEvent) {
       var params = oEvent.getParameters();
       
