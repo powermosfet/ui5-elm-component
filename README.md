@@ -3,7 +3,7 @@ Run an elm app in UI5 as a component
 
 Usage example:
 
-    var elmApp = new custom.component.Elm({ app: Elm.ElmButton });
+    var elmApp = new custom.component.Elm({ app: Elm.ElmCounter });
     elmApp.attachElmEvent(function(oEvent) {
       var params = oEvent.getParameters();
       
