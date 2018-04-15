@@ -1,6 +1,6 @@
 # (Open)UI5 Elm component
 
-Run an elm app in UI5 as a component
+Run an elm app in UI5, wrapped in a component
 
 The Elm app needs two ports to communicate with the UI5 component: one for events going out, and one for actions coming in. 
 
