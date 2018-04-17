@@ -8,22 +8,24 @@ The UI5 component needs to know their name, and this is configurable through the
 
 Usage example: 
 
-    var elmApp = new custom.component.Elm({ app: Elm.ElmCounter });
-    
-    elmApp.attachElmEvent(function(oEvent) {
-      var params = oEvent.getParameters();
-      
-      switch(params.type) {
-        case "newCounterValue":
-          console.log("New counter value: " + params.counterValue);
-          break;
-      }
-    });
-    
-    elmApp.dispatch({
-        type: "increaseCount"
-    });
-    
-    elmApp.dispatch({
-        type: "increaseCount"
-    });
+```javascript
+var elmApp = new custom.component.Elm({ app: Elm.ElmCounter });
+
+elmApp.attachElmEvent(function(oEvent) {
+    var params = oEvent.getParameters();
+
+    switch(params.type) {
+      case "newCounterValue":
+        console.log("New counter value: " + params.counterValue);
+        break;
+    }
+});
+
+elmApp.dispatch({
+    type: "increaseCount"
+});
+
+elmApp.dispatch({
+    type: "increaseCount"
+});
+```
